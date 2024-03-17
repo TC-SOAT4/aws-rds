@@ -2,7 +2,7 @@
 
 ### Criação banco de dados gerenciado AWS RDS utilizando Terraform
 
-Projeto para criar um banco de dados gerenciado AWS RDS. O RDS utiliza engine mariadb versão 10.11.
+Projeto para criar um banco de dados gerenciado AWS RDS utilizando engine mariadb versão 10.11.
 
 ------------
 
