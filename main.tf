@@ -1,5 +1,5 @@
 provider "aws" {
-  profile = "fiap"
+  profile = "thiago"
   region  = var.regionDefault
 }
 
