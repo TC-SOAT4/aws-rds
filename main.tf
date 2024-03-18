@@ -52,11 +52,11 @@ resource "aws_db_instance" "rds" {
   db_subnet_group_name         = aws_db_subnet_group.subnet-rds.id
   apply_immediately            = true
   skip_final_snapshot          = true
-  publicly_accessible          = false
-  deletion_protection          = true
+  publicly_accessible          = true
+  deletion_protection          = false
   performance_insights_enabled = false
   backup_retention_period      = 1
   backup_window                = "00:00-00:30"
   copy_tags_to_snapshot        = true
-  delete_automated_backups     = false
+  delete_automated_backups     = true
 }
