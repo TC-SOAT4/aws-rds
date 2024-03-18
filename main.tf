@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = var.regionDefault 
+  region = var.regionDefault
 }
 
 resource "aws_db_subnet_group" "subnet-rds" {
