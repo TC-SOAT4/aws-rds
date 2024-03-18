@@ -47,7 +47,7 @@ variable "maxStorage" {
 }
 
 variable "vpcId" {
-  default = "vpc-007d6a1529c4b043a"
+  default = "vpc-04ee09426e0546365"
 }
 
 variable "vpcCIDR" {
@@ -55,13 +55,13 @@ variable "vpcCIDR" {
 }
 
 variable "subnet01" {
-  default = "subnet-0a80a2e2a49093a7f"
+  default = "subnet-03c964c540d439fef"
 }
 
 variable "subnet02" {
-  default = "subnet-013223fc01e681b2b"
+  default = "subnet-03d8840eb8ccbd474"
 }
 
 variable "subnet03" {
-  default = "subnet-0410002ec39e2f1e5"
+  default = "subnet-0552155f18ca61789"
 }
