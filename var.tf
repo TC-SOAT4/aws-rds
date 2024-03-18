@@ -23,9 +23,11 @@ variable "engineRdsVersion" {
 }
 
 variable "rdsUser" {
+  default = "mariadb"
 }
 
 variable "rdsPass" {
+  default = "root"
 }
 
 variable "instanceClass" {
