@@ -23,11 +23,11 @@ variable "engineRdsVersion" {
 }
 
 variable "rdsUser" {
-  default = "lanchonetemariadb"
+  default = "lanchoneteuser"
 }
 
 variable "rdsPass" {
-  default = "lanchoneteroot"
+  default = "lanchonete"
 }
 
 variable "instanceClass" {
