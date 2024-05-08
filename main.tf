@@ -51,7 +51,7 @@ resource "aws_security_group" "security_group_lanchonete_rds" {
 resource "aws_db_instance" "mariadb-fiap-tech-challenge" {
   identifier = "rds-${var.projectName}"
   engine     = var.engineRds
-  db_name    = var.dbName
+  db_name    = var.dbNamePedido
   #parameter_group_name  = "default.sqlserver-ex-15.0"
   engine_version        = var.engineRdsVersion
   instance_class        = var.instanceClass
@@ -79,6 +79,20 @@ resource "aws_db_instance" "mariadb-fiap-tech-challenge" {
     delete = "15m"
   }
 
+}
+
+# Configure the MySQL provider based on the outcome of
+# creating the aws_db_instance.
+provider "mysql" {
+  endpoint = "${aws_db_instance.mariadb-fiap-tech-challenge.endpoint}"
+  username = "${aws_db_instance.mariadb-fiap-tech-challenge.username}"
+  password = "${aws_db_instance.mariadb-fiap-tech-challenge.password}"
+}
+
+# Create the second database beside "initial_db"
+# using the aws_db_instance resource above.
+resource "mysql_database" "producao-db" {
+  name = var.dbNamePedido
 }
 
 

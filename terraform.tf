@@ -13,6 +13,11 @@ terraform {
       version = ">= 5.40.0"
     }
 
+    mysql = {
+      source = "petoju/mysql"
+      version = "3.0.58"
+    }
+
   }
 
   required_version = "~> 1.3"

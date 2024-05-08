@@ -2,8 +2,12 @@ variable "projectName" {
   default = "fiap-tech-challenge"
 }
 
-variable "dbName" {
-  default = "lanchonetedb"
+variable "dbNamePedido" {
+  default = "pedidodb"
+}
+
+variable "dbNameProducao" {
+  default = "producaodb"
 }
 
 variable "regionDefault" {
