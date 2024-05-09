@@ -92,7 +92,7 @@ provider "mysql" {
 # Create the second database beside "initial_db"
 # using the aws_db_instance resource above.
 resource "mysql_database" "producao-db" {
-  name = var.dbNamePedido
+  name = var.dbNameProducao
 }
 
 
