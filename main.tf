@@ -84,9 +84,9 @@ resource "aws_db_instance" "mariadb-fiap-tech-challenge" {
 # Configure the MySQL provider based on the outcome of
 # creating the aws_db_instance.
 provider "mysql" {
-  endpoint = "${aws_db_instance.mariadb-fiap-tech-challenge.endpoint}"
-  username = "${aws_db_instance.mariadb-fiap-tech-challenge.username}"
-  password = "${aws_db_instance.mariadb-fiap-tech-challenge.password}"
+  endpoint = aws_db_instance.mariadb-fiap-tech-challenge.endpoint
+  username = aws_db_instance.mariadb-fiap-tech-challenge.username
+  password = aws_db_instance.mariadb-fiap-tech-challenge.password
 }
 
 # Create the second database beside "initial_db"
@@ -94,6 +94,7 @@ provider "mysql" {
 resource "mysql_database" "producao-db" {
   name = var.dbNameProducao
 }
+
 
 
 
