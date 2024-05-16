@@ -2,12 +2,12 @@ variable "projectName" {
   default = "fiap-tech-challenge"
 }
 
-variable "clusterName" {
-  default = "fiapTechChallenge"
+variable "dbNamePedido" {
+  default = "pedidodb"
 }
 
-variable "dbName" {
-  default = "lanchonetedb"
+variable "dbNameProducao" {
+  default = "producaodb"
 }
 
 variable "regionDefault" {
@@ -44,24 +44,4 @@ variable "minStorage" {
 
 variable "maxStorage" {
   default = "30"
-}
-
-variable "vpcId" {
-  default = "vpc-04ee09426e0546365"
-}
-
-variable "vpcCIDR" {
-  default = "172.31.0.0/16"
-}
-
-variable "subnet01" {
-  default = "subnet-03c964c540d439fef"
-}
-
-variable "subnet02" {
-  default = "subnet-03d8840eb8ccbd474"
-}
-
-variable "subnet03" {
-  default = "subnet-0552155f18ca61789"
 }
